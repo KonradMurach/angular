@@ -1,0 +1,16 @@
+<button (click)="getPosts()">getPosts</button><br>
+<input [(ngModel)]="getPostText"> <button (click)="getPost()">getPost</button><br>
+<input [(ngModel)]="getPostsByUserIdText"> <button (click)="getPostsByUserId()">getPostsByUserId</button><br>
+<button (click)="addPost()">addPost</button><br>
+<button (click)="updatePost()">updatePost</button><br>
+<button (click)="changePost()">changePost</button><br>
+<button (click)="deletePost()">deletePost</button><br>
+<button (click)="getPostsWithError()">getPostsWithError</button><br>
+
+<button (click)="getwWeatherforecast()">getwWeatherforecast</button><br>
+
+
+
+<div *ngFor="let post of allPosts$ | async">
+{{post.title}}
+</div>

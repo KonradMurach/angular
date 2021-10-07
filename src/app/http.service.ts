@@ -1,5 +1,5 @@
 import { Post } from './modules/post';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -45,6 +45,6 @@ export class HttpService {
 
 
   getwWeatherforecast(): Observable<any> {
-    return this.http.get<any>('http://konradtest.aspnet.pl/weatherforecast');
+    return this.http.get<any>('http://konradtest.aspnet.pl/weatherforecast', { headers: new HttpHeaders({ timeout: `${20000}` }) });
   }
 }

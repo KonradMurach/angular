@@ -101,7 +101,14 @@ export class AppComponent  {
     return post;
   }
 
+
   getwWeatherforecast() {
+    this.httpService.getwWeatherforecast().subscribe(posts => {
+      console.log(posts);
+    });
+  }
+
+  getwWeatherforecast2() {
     this.httpService.getwWeatherforecast().subscribe(posts => {
       console.log(posts);
     });

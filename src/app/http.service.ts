@@ -45,6 +45,12 @@ export class HttpService {
 
 
   getwWeatherforecast(): Observable<any> {
-    return this.http.get<any>('http://konradtest.aspnet.pl/weatherforecast', { headers: new HttpHeaders({ timeout: `${20000}` }) });
+    return this.http.get<any>('http://konradtest.aspnet.pl/weatherforecast');
   }
+
+  getwWeatherforecast2(): Observable<any> {
+    return this.http.get<any>('https://www.konradmurach.aspnet.pl/weatherforecast');
+  }
+
+
 }

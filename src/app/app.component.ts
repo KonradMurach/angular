@@ -109,7 +109,7 @@ export class AppComponent  {
   }
 
   getwWeatherforecast2() {
-    this.httpService.getwWeatherforecast().subscribe(posts => {
+    this.httpService.getwWeatherforecast2().subscribe(posts => {
       console.log(posts);
     });
   }
